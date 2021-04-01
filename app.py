@@ -27,30 +27,23 @@ if st.button("Run Classifier"):
   if pred==1:
     st.write('Politics')   
     pred= int(pred)
-    data_pred = data.loc[(data['pred_label'] == pred)]
-    st.markdown(data_pred['full_link'].unique())
+    related = data[data['category']=='politics']["url"]
   elif pred==0:
     st.write('Entertainment')
-    term="entertainment"
     pred= int(pred)
-    data_pred = data.loc[(data['pred_label'] == pred)]
-    st.markdown(data_pred['full_link'].unique())
+    related = data[data['category']=='entertainment']["url"]
+      
   elif pred==2:
     st.write('sport') 
     pred= int(pred)
-    term="sports"
     pred= int(pred)
-    data_pred = data.loc[(data['pred_label'] == pred)]
-    st.markdown(data_pred['full_link'].unique())
+    related = data[data['category']=='sports']["url"]
   elif pred==3:
     st.write('other(culture,celebreties,art)')
     pred= int(pred)
-    term='culture'
-    data_pred = data.loc[(data['pred_label'] == pred)]
-    st.markdown(data_pred['full_link'].unique())
+    related = data[data['category']=='culture']["url"]
   elif pred==4:
     st.write('business')
     pred= int(pred)
     term='business'
-    data_pred = data.loc[(data['pred_label'] == pred)]
-    st.markdown(data_pred['full_link'].unique())
+    related = data[data['category']=='business']["url"]
