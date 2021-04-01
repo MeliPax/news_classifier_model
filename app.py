@@ -18,7 +18,7 @@ html_temp = """
 """ 
 st.markdown(html_temp, unsafe_allow_html = True) 
 default_value_goes_here = ""
-Content = st.text_area("Paste news story below to predict:", default_value_goes_here)
+Content = st.text_area("Paste your news story to classify:", default_value_goes_here)
 result =""
 data= pd.read_csv('https://raw.githubusercontent.com/Diane10/capstone/main/result.csv')
 
