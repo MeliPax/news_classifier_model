@@ -6,16 +6,14 @@ from sklearn.preprocessing import LabelEncoder
 label_enc = LabelEncoder()
 
 
-
-# clean_doc=pickle.load(open('clean_doc.obj','rb'))
 tfid= pickle.load(open('Tfidfmodels.pkl','rb'))
 model=pickle.load(open('kmeanmodel.pkl','rb'))
 data= pd.read_csv('https://raw.githubusercontent.com/Diane10/news_classifier/main/All_combined_New_papers%20-%20Sheet1.csv')
       
 # front end elements of the web page 
 html_temp = """ 
-<div style ="background-color:yellow;padding:13px"> 
-<h1 style ="color:black;text-align:center;">Streamlit News Classifier App</h1> 
+<div style ="background-color:white;padding:15px"> 
+<h1 style ="color:black;text-align:center;">News Classifier App</h1> 
 </div> 
 """ 
 st.markdown(html_temp, unsafe_allow_html = True) 
@@ -50,7 +48,7 @@ if st.button("Predict"):
     term='culture'
     data_pred = data.loc[(data['pred_label'] == pred)]
     st.markdown(data_pred['full_link'].unique())
-elif pred==4:
+  elif pred==4:
     st.write('business')
     pred= int(pred)
     term='business'
