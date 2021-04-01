@@ -25,7 +25,7 @@ data= pd.read_csv('https://raw.githubusercontent.com/Diane10/capstone/main/resul
 if st.button("Run Classifier"): 
   pred = model.predict(tfid.transform([Content]))
   if pred==1:
-    st.write('sport')   
+    st.write('Politics')   
     pred= int(pred)
     data_pred = data.loc[(data['pred_label'] == pred)]
     st.markdown(data_pred['full_link'].unique())
@@ -36,9 +36,9 @@ if st.button("Run Classifier"):
     data_pred = data.loc[(data['pred_label'] == pred)]
     st.markdown(data_pred['full_link'].unique())
   elif pred==2:
-    st.write('politics') 
+    st.write('sport') 
     pred= int(pred)
-    term="pol"
+    term="sports"
     pred= int(pred)
     data_pred = data.loc[(data['pred_label'] == pred)]
     st.markdown(data_pred['full_link'].unique())
