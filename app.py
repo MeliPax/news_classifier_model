@@ -11,7 +11,7 @@ label_enc = LabelEncoder()
 # clean_doc=pickle.load(open('clean_doc.obj','rb'))
 tfid= pickle.load(open('Tfidfmodels.pkl','rb'))
 model=pickle.load(open('kmeanmodel.pkl','rb'))
-data= pd.read_csv('https://raw.githubusercontent.com/Diane10/news_classifier/main/All_combined_New_papers%20-%20Sheet1.csv')
+data= pd.read_csv('news.csv')
 
 # # Function to cleaning article headings
 # def clean_text(x):
