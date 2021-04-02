@@ -8,3 +8,4 @@ streamlit
 spacy==2.2.3
 beautifulsoup4==4.9.1
 textblob==0.15.3
+git+https://github.com/laxmimerit/preprocess_kgptalkie.git
