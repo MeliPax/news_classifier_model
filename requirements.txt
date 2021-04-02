@@ -6,6 +6,5 @@ pandas>=0.19
 tensorflow-cpu
 streamlit
 spacy==2.2.3
-spacy download en_core_web_sm
 beautifulsoup4==4.9.1
 textblob==0.15.3
