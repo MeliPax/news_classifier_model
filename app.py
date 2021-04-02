@@ -89,27 +89,27 @@ if st.button("Run Classifier"):
     result='business'
     pred= int(pred)
     term='business'
-    related = data[data['category']=='business']["url"]
+    related = data[data['category']=='business']["link"]
       
   elif pred==1:
     result='other(culture,celebreties,art)'
     pred= int(pred)
-    related = data[data['category']=='culture']["url"]
+    related = data[data['category']=='culture']["link"]
       
   elif pred==2:
     result='Entertainment'
     pred= int(pred)
-    related = data[data['category']=='entertainment']["url"]
+    related = data[data['category']=='entertainment']["link"]
 
   elif pred==3:
     result='Politics'   
     pred= int(pred)
-    related = data[data['category']=='politics']["url"]
+    related = data[data['category']=='politics']["link"]
   
   elif pred==4:
     result='sport' 
     pred= int(pred)
-    related = data[data['category']=='sports']["url"]
+    related = data[data['category']=='sports']["link"]
 
   st.success('The predicted category of the article is: {}'.format(result))
   html_temp = """
