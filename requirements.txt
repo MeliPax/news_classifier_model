@@ -5,8 +5,3 @@ matplotlib>=1.4.3
 pandas>=0.19
 tensorflow-cpu
 streamlit
-spacy==2.2.3
-beautifulsoup4==4.9.1
-textblob==0.15.3
-git+git://github.com/laxmimerit/preprocess_kgptalkie.git
-en_core_web_sm
