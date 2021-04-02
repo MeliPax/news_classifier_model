@@ -13,6 +13,8 @@ tfid= pickle.load(open('Tfidfmodels.pkl','rb'))
 model=pickle.load(open('kmeanmodel.pkl','rb'))
 data= pd.read_csv('news.csv')
 
+data['category']=data['category'].apply(lambda x:x.lower())
+
 # # Function to cleaning article headings
 # def clean_text(x):
 #     x = str(x).lower().replace('\\', '').replace('_', ' ')
@@ -72,7 +74,6 @@ st.markdown(html_temp, unsafe_allow_html = True)
 default_value_goes_here = ""
 Content = st.text_area("Enter story text to be predected in the below textbox:", default_value_goes_here)
 result =""
-data= pd.read_csv('https://raw.githubusercontent.com/Diane10/capstone/main/result.csv')
 
 # content = clean_text(Content)
 
